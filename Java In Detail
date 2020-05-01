@@ -1,0 +1,126 @@
+JAVA in Detail:
+
+1. JDK vs JRE vs JVM:
+	-> JVM : Contains Class loader [loads class files (when java code is converted to byte code by compiler]and Byte code verifier
+	-> JRE : Contains JVM, Class Libraries and supporting files
+	-> JDK : Contains developer tools compiler (javac), archiver (jars), doc generator (javadoc)
+	
+	JDK is for DEVELOPMENT purpose whereas JRE is for RUNNING the java programs.
+	JDK and JRE both contains JVM so that we can run our java program. JDK is a superset of JRE and contains everything already
+	JVM is the heart of java programming language and provides platform independence.
+	
+2. Run Java code in CMD prompt:
+
+	1. Go to cmd promt from location where .java file is stored
+	2. Compile the code using "javac fileName.java"
+	3. Run the code using "java fileName"
+	
+3. Java Memory Model: 
+
+	Reference: https://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java
+	
+	(1) HEAP MEMORY: 
+	
+		- To Store OBJECTS. It is created when the JVM starts up. It is divided into 2
+		- -Xms -> define Startup size  and -Xmx -> Max size of Heap memory ; -Xss -> define Stack memory size
+		- when full, java.lang.OutOfMemoryError: Java Heap Space
+	
+	1. Younger Gen
+	
+		- Eden Memory - Stores new created objects. Minor GC happens when mem is full. 
+		- 2 Survivor Memory - Survived objects will be moved to 1 of the S0 or S1 memory
+	
+	2. Old Generation
+		-	Objects survived after multiple GCs are moved to Old Gen.
+	
+	(2) Permanent Generation:
+	
+		- To Store application metadata(data about data) required by JVM to describe classes and methods used by the application
+	
+	(3) Method Area:
+		
+		- Space in Perm Gen to store class structure and code for methods and constructors
+		
+	(4) Memory Pool:
+	
+		- Created by JVM to create a pool of immutable objects. E.g. String Pool
+		
+	(5) STACK: (LIFO)
+		
+		- Used for Execution of a Thread (Thread - independent path of execution in a program)
+		- Contains Method specific values (Short Lived)
+		- Contains Reference of heap objects
+		- When full, java.lang.StackOverFlowError at runtime
+		
+4. String Pool: Special memory region
+
+		  https://www.journaldev.com/16928/java-string
+	
+		- Pool of Strings stored in the Heap memory
+		
+		- Caching the String literals in pool and reusing them saves a lot of heap space
+		
+		- Can be created in 2 ways : 
+		
+	(1) Literal: String str = "String using double quotes"
+	
+		-	When created, JVM looks for the pool containing the same value,
+			- if yes, returns the reference to that String object
+			- else, creates new String object in the pool
+			- String Interning occurs automatically when 2 Strings have same value
+			
+	(2) new : Using Constructors -> String str = new String("String using new keyword");
+
+		- 	Creates a new object and store it in the heap memory	
+		- 	Every string created will point to a diff memory locaion with its own address
+		-	String Interning needs to be done Manually, using String s2 = str.intern();
+		
+	String Interning:
+	
+		- Storing only one copy of each literal String in the pool.
+		- When a new String created, JVM looks for the value in the pool. If yes, returns the reference,
+		  without allocating memory
+		  
+	Manual Interning:
+	
+		- Can use .intern() method to put it into the pool (or)
+		- refer to another string object in the pool having same value
+		
+		E.g. String s1 = "Created using Literal";
+			 String s2 = new String("Created using new keyword");
+			 s1 == s2 ; //false
+			 s1.equalsTo(s2) ; // true
+			 
+			 String s3 = s2.intern();
+			 s3 == s1; //true 
+			 
+	Immutability:
+	
+		- Object whose inner state remains constant after it is entirely created
+		- Once String object is created, its data or state cannot be changed but a new String object is created
+		- Benefits: 1. Caching, 2. Security, 3. Synchronization (MultiThreading), 4. Hashcode Caching - Improves performance
+		
+		E.g. String s1 = "Java"; -> Creates a new object with value "Java" in the pool and points the reference to s1
+			 s1.concat("Basics"); -> Creates a new reference with value "Java Basics" in the pool 
+			 syso(s1); -> o/p = Java ; Since its still pointing to Java and not Java Basics. 
+			 To Print Java Basics have to reassign to s1
+			 s1 = s1.concat("Basics");	
+			 
+3. Access Specifiers/Modifiers vs Non Access Modifiers:
+
+	- Controls access of class, method and variable
+
+	Private   - Only within class
+	Protected - Within package and other subclasses of other package
+	Default	  - Same Package
+	
+	Non Access Modifiers: To achieve many functionalities and to provide info about behaviour to JVM
+	
+	E.g. 1. Static 2. Final 3. Abstract
+	
+	
+		
+		
+	
+		
+		

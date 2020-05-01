@@ -1,0 +1,9 @@
+Basic Questions in JAVA:
+
+1. Can Class Name and Source File Name be different?
+ Yes, only if the class is not public ; run using cmd promt
+ 
+2. Can we have multiple classes in a single .java file?
+ Yes, It can be either nested in a single class (or) multiple independent classes.
+ Note: But only Public class allowed as its name should be same as file name
+

@@ -1,0 +1,36 @@
+OOPS:
+
+(1) Class:
+		
+	 - Blueprint/prototype from which objects are created
+	 - Represents the set of properties/methods that are common for all objects within the class
+	 
+(2) Variable vs Object vs Reference:
+
+	I like to use an analogy of telling someone where I live. I might write my address on a piece of paper:
+
+	-> A variable is like a piece of paper. It holds a value, but it isn't the value in itself. You can cross out whatever's there and write something else instead.
+	
+	-> The address that I write on the piece of paper is like a reference. It isn't my house, but it's a way of navigating to my house.
+	
+	-> My house itself is like an object. I can give out multiple references to the same object, but there's only one object.
+	
+	i) Variable : Storage location in memory
+		 
+		 a) Instance: Created within class and outside method ; Scope: Throughout the class except in static methods
+		 b) Local	: Created within a method ; Scope: Only within that method
+		 c) Static	: Created within a class with a keyword 'static' ; Scope: Throughout the class
+		 
+	
+   ii) Object   : Instance of a Class ; Object creation has 3 parts
+   
+			ClassName obj = new ClassName();
+			
+		a) Declaration   : Associate a variable name with an object type ; E.g. ClassName obj
+		b) Instantiation : The new keyword is a java operator that creates a object
+		c) Initialization: The new operator is followed by a call to a constructor, which initializes the new object
+		
+   
+  iii) Reference: Value used to access an object. E.g. to call methods,fields using . operator
+  
+  
