@@ -33,4 +33,76 @@ OOPS:
    
   iii) Reference: Value used to access an object. E.g. to call methods,fields using . operator
   
-  
+(3) Constructors:
+
+	- To initialize the object
+	- Called when Instance of class in created. i.e. Class obj = new Class(); -> constructor
+	- Called Constructor because it the constructs the values at the time of object creation
+	
+	Types:
+	
+	1. Default: Called by default during obj creation and sets default values to the obj depending on the type
+	2. Parameterized: To set different values to objects by passing parameters
+	
+	Rules:
+	
+	1. Same Name as Class Name
+	2. No Return type
+	3. Cannot be abstract, final, static
+	4. Can be access modified. Private, Public, Protected
+	
+(3a) Constructor Overloading:
+
+	- Similar to method overloading. Compiler differentiates based on number of parameters,type of params and order
+	
+(3b) Constructor Chaining:
+
+	- Calling one Constructor from another w.r.t current object
+	- 2 ways: 1. Within class - 'this' keyword ; 2. From Base class - 'Super' keyword
+	- Occurs through Inheritance
+	
+	Rules:
+	
+	- this(),Super() - should be the first line in any constructor
+	
+	why? - To perform multiple tasks using single constructor, create constructor for each task make a chain - Readability
+	
+	- Init Block: Executes before any constructor, whenever a constructor is used to create an object
+	
+(4) Static:
+
+	- keyword used mainly for 'Memory Management'
+	- It belongs to the Class and not Instance of the class
+	- Storage: In 'Method Area' which is part of PermGen
+	- Can be used with variables, method, blocks and nested classes
+	- Usage: 1. To refer common property of all objects [ Shared to all objects ]
+			 2. It gets memory only once in the class area at the time of class loading
+			 
+	Restrictions:
+	
+	- Static method cannot use non-static variable directly or call non-static method directly
+	- 'this' and 'super' cannot be used in static context 
+	   why? 
+	   - 'this' and 'super' require an object to handle, because they are reference variables that belongs to the instance of the class, whereas 'static' belongs to the class itself and not referring to any object.
+
+(4a) Why Main Method is static?
+
+	- It doesn't require object creation to call a static method. If it is a non-static, then JVM creates an obj first
+	
+(5) 'this' keyword:
+
+	- Reference variable - Refers to the current object
+	
+	Usages:
+	
+	1. To refer current class instance variable; differentiates local parameters and instance variable
+	2. To invoke current class method
+	3. To invoke current class constructor ; calling parameterized cons from default or vice versa ; helps in reusability of 	 constructors
+	
+	Restrictions: cannot use both 'this' and 'super' together? - why?
+	- 'this' is used to call constructors of same class ; 'super' is used to call constructors of parent class
+	- Rule: Constructor call must be the first line always. So cannot have both in first line
+
+	
+	
+			  
