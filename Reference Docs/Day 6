@@ -1,0 +1,68 @@
+pom.xml
+Dependencies:
+    a) Rest-Assured
+    b) Cucumber
+    c) TestNG
+    d) Allure -> Cucumber, TestNg
+Build
+    a) Plugin: SureFire, Allure
+    b) aspect 
+
+For Matschie Framework
+
+1) Download Matschie Framework
+   https://github.com/TestLeafPages/AprilPostMan/blob/master/Matschie.zip
+2) Extract it in your local
+3) Open the eclipse, Import Maven Project and select the Matschie
+   Ensure pom.xml does exist and selected
+4) Once loaded, confirm there no errors!!
+5) Run as Maven test -> Confirm the 4 tests are successful !!
+6) Open the command line and go to the Matschie folder (where you see pom.xml)
+   Run the following command
+   mvn allure:serve and that should launch the HTML reporting !!
+   
+To Add JDK instead of JRE
+
+1) Open the project-specific libraries of the Java Build Path: Right-click "Project > Build Path > Configure Build Path..." and select "Libraries" tab.
+2) Select the "JRE System Library" entry and hit "Remove".
+3) Hit "Add Library...".
+4) A wizard pops up. Select "JRE System Library" and hit "Next >".
+5) Now select the correct JDK (in my case "Workspace default JRE", which I configured using a JDK).
+6) Close wizard by hitting "Finish".
+7) Close "Properties" dialog by hitting "OK".
+
+
+2) Makaia
+    a) Objective: UI + API Automation (Single United Framework)
+    b) Component: Selenium + Rest Assured + TestNG (Driver) + Cucumber (BDD) + Extent Reports (HTML)
+    c) Maven Project -> Build Tool
+    d) Flavor : Page Object Design (Selenium + RestAssured Base) + Cucumber (With Pages) + Independent 
+    e) Test data from external files -> JSON, Xlsx, (DB)
+    Library:  Event Listeners + Wrappers + Data + Report 
+    1) listeners -> Customized Solutions (Selenium, TestNg, ExtentReport)
+    2) rest -> RestAssured Wrapper with Reporting and Exception Handling + PreAndTest (TestNG Annotations)
+    3) selenium -> Selenium Wrapper with Reporting and Exception Handling + PreAndPost (TestNG Annotations)
+    4) utils -> Reading data from excel or json (DataInputProvider) + Reporter (HTMLReporter)
+    Design: Pages (Selenium) + (Cucumber)  => Runner + Features + Hooks 
+    1) pages
+    2) hooks 
+    Tests: Selenium + REST + Mixed 
+    1) selenium
+    2) rest 
+	
+Karate:
+
+https://github.com/intuit/karate
+
+https://github.com/intuit/karate#http-basic-authentication-example
+
+<dependency>
+            <groupId>com.intuit.karate</groupId>
+            <artifactId>karate-apache</artifactId>
+            <version>0.9.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.intuit.karate</groupId>
+            <artifactId>karate-junit5</artifactId>
+            <version>0.9.5</version>
+        </dependency>

@@ -1,0 +1,9 @@
+Day 1:
+1) Different request types
+2) URL structure
+3) Inheritance of Authorization - Collection to Request
+4) JSON format
+5) Status codes
+6) Different Parameters
+7) Headers types
+8) Advantages of API over UI Automation

@@ -1,0 +1,7 @@
+NewMan - Command Line -> NodeJs    
+1) Install NodeJs  (https://nodejs.org/dist/v12.16.2/node-v12.16.2-x64.msi)   
+2) Verify the installation is complete : node -v (cmd) | npm -v (cmd)      
+3) Install Newman       npm install -g newman   
+4) Verify the installation is complete : newman -v   
+5) Export the collection (request), environment, globals    a) Collection -> Only the request you wanted to run in NewMan (.json)        b) Environment (only the environment -> that you use) -> json        c) Globals    
+6) Run the newman scripts       newman run SN_Collection.json -e environment.json -g globals.json -n 2

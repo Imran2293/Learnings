@@ -1,0 +1,28 @@
+Headers:
+
+1. Accept - Specify the media type of RESPONSE expected from the server --> GET
+2. ContentType - Specify the media type of REQUEST sent to the server --> POST, PUT, DELETE
+
+Mocking - when dev team doesn't complete the api devolopment but asked the testing team to have a mock api created
+		- Used for temporary developement of api
+||r to Stub | Skeleton in Manual testing
+- Dummy system
+E.g. Wiremock - 
+
+<dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock</artifactId>
+            <version>2.26.3</version>
+        </dependency>
+		
+Session ID: Available in Cookies tabs 
+Even non API appications validations can be done using Postman for test data,
+--Application should allow cookies - to get the session id to travel through the application
+Important Usage: Create Data using API easier compared to Selenium
+
+API vs Non API Applications:
+--> Integrate Several appications [E.g. ServiceNow - uses Remedy, Incident..] - Uses API
+--> Independant Applications - No need of APIs
+
+For PUT: body is mandatory
+	GET: body is optional

@@ -1,0 +1,5 @@
+
+1) User Details -> Get Response -> Filter by First Name / Email  -> Get sys_id (user) (200) -> Pass to Next      table: sys_user   
+// Find the sys_id of one of the user (Abel) -> Using Programming -> Store in the global variable   sys_id_user
+
+2) Create Incident -> Use sys_id (user) -> Incident Number -> sys_id (incident) (201) -> Pass to Next   Body -> Parameter 

@@ -1,0 +1,83 @@
+Additional Insights
+
+Cookie(s)
+Header(s)
+Matcher(s)
+
+Real-time configurations (if needed)
+
+1) UrlEncoding
+2) Response log -> validation failure
+3) RelaxedHttpsValidation
+4) Proxy
+
+
+Parameters
+
+1) Param(s)	-> queryParam (get) | formParam (post)
+2) queryParam	-> filters your records 
+3) formParam	-> sending data either in form (url)
+4) pathParam    -> parameter in the URL
+
+Chaining RestAssured using TestNg
+
+1) Inheritance
+2) Annotations
+3) Dependency 
+
+RestAssured Integration with Cucumber + TestNg
+1) Feature File (Cucumber)
+2) Step Definition (RestAssured)
+3) Runner (TestNg)  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  Cookie session = new Cookie.Builder("JSESSIONID","5B6B38E26AC2DCADACC7F614B506D9BB").build();
+  
+  
+1) Cookie(s)
+2) Header(s)
+3) Validate Response -> then, assert and Matchers !!
+import static org.hamcrest.Matchers.*;
+JIRA (Get all issues)
+1)
+-> add Headers
+-> Verify Cookies
+2)
+validate response -> verify the status code (200) and confirm the content-type is coming as json 
+
+
+1) BaseRequest
+    a) @BeforeSuite -> Push all common code inside
+    b) static variables request,  sys_id 
+    request: log (all), content-type
+2) Create Change Request
+    a) extends BaseRequest
+    b) Removed repeated code
+    c) store sys_id at BaseRequest class variable
+3) Delete Change Request
+    a) extends BaseRequest
+    b) Removed repeated code
+    c) Use sys_id to delete
+    d) depends on Create
+4) Run from XML or from the delete CR class to confirm the creation and deletion works in chain process.

@@ -1,0 +1,21 @@
+Day 3 Summary:
+
+RestAssured:
+1. Add Dependancies -- TestNG, RestAssured
+2. Difference b/w BasePath and BaseURI
+3. Authentication : Basic and OAuth
+4. Request Specification
+	-	Param
+	-	Params
+5. Parse into JSON/XML
+6. POST:
+	-	With No body     
+	-	body (String) -> Hard Coded Values     
+	-	body (File)     -> Send from the file (JSON, XML)     
+	-	Run for different data: TestNg dataprovider (Pre-Req: TestNG)     
+	-	Run them in parallel
+	
+7. DELETE:
+	-	pass value in URL/ in delete("url");
+
+8. PUT:

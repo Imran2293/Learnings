@@ -1,0 +1,72 @@
+// Step 1: Get the URL / Endpoint for the services        
+        
+RestAssured.baseURI = "https://dev49243.service-now.com/api/now/table/incident";
+        
+        
+// Step 2: Authentication (basic)
+        
+RestAssured.authentication = RestAssured.basic("admin", "Tuna@123");
+        
+        
+// Step 3: Request type - Get -> Response
+        
+Response response = RestAssured.get();
+        
+        
+// Step 4: Validate (Response -> Status Code : 200)
+        
+System.out.println(response.getStatusCode());
+        
+        
+
+// Print the response time as well 
+        
+        
+// Check what is the response format
+        
+
+System.out.println(response.getContentType());
+        
+        
+// print the response
+        
+response.prettyPrint();
+
+1) Change Request (Get)
+    a) state -> -5 (new)
+    b) type -> normal
+    c) i need only number, sys_id
+    d) Get the count of the change_requests
+
+2) Change the response as XML
+    a) Confirm the count matches as expected 
+
+1) Create Change Request -> With no body -> Print sys_id - Done
+2) Create CR with body as String -> Print number - Done
+3) Create CR with file (json) -> Print the sys_id 
+4) Run with DP and in Parallel  - Done
+
+
+1) Delete an existing CR using sys_id
+2) Change the description of the CR using sys_id
+
+1) Post     
+a) Request Type: Post     
+b) Content-Type: JSON     
+c) get (Single Response) 
+
+2) POST:
+
+a) With No body     
+b) body (String) -> Hard Coded Values     
+c) body (File)     -> Send from the file (JSON, XML)     
+d) Run for different data: TestNg dataprovider (Pre-Req: TestNG)     
+e) How to run them in parallel?
+
+1) JIRA 
+    a) Get all Issues (only in 24 hours)
+    b) Create Issue & Attachment of file to the issue - Done
+    d) Get random issue and Delete that Issue - Done
+    e) Get the recently created issue & Update that Issue
+2) PostMan (BestBuy) -> Convert them Rest Assured
+

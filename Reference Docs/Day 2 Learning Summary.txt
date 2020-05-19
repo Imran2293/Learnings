@@ -1,0 +1,27 @@
+How to Create a OAuth Token
+How to USe it on the POSTMAN
+How to set Multiple Data using Data File
+Visualization - How to show the data in a HTML format
+Enterprise POSTMAN 
+    - How to create a team worksapce
+    - How to collobarte all the collection acrros the team
+    - How generate a GITHUB token to access it via postman
+    - How to syn files to GITHUB from POSTMAN
+    - Monitor a Performance testing where we can schedule a job and ferequecy to execute the requests
+
+
+Interceptor in Detail:
+
+https://blog.postman.com/postman-interceptor-the-next-generation-view-source-for-the-api-economy/
+
+https://dev49243.service-now.com/oauth_token.do
+
+Documentation
+https://developer.servicenow.com/blog.do?p=/post/inbound-oauth-auth-code-grant-flow-part-1/
+
+Bestbuy 
+https://bestbuyapis.github.io/api-documentation/#stores-api
+
+1) Print total best buy stores2) 	
+
+qUh3qMK14GdwAs9bO59QRSCJ
